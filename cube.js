@@ -26,6 +26,15 @@ function changeCube() {
 
 function changeGoal() {
     cube.goalPotential = getRadioIndex("potential");
+    if (cube.goalPotential != 2) {
+        if (cube.goalPotential == 0) {
+            document.getElementById('nag').innerHTML = "선생님... 혹시 에픽 잠재능력 주문서라고 들어보셨습니까?"
+        } else {
+            document.getElementById('nag').innerHTML = "선생님, 곧 유니크 잠재능력 주문서가 풀립니다. 알고계십니까?"
+        }
+    } else {
+        document.getElementById('nag').innerHTML = "";
+    }
 }
 
 function calculation() {

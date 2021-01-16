@@ -72,3 +72,6 @@ button {
     text-align: right;
     margin-bottom: 20px;
 }
+a:link {text-decoration: none; color: #9ce159;}
+a:visited {text-decoration: none; color: #9ce159;}
+a:hover {text-decoration: none; color: #AA7949;}
