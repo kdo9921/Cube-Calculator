@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    color: #ffffff;
+}
+.background {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: fixed;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    z-index: -100;
+    background-image: url(./img/background.jpg);
+}
+.container {
+    margin: 0 32px;
+}
+.info_warp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info_warp label {
+    display: inline;
+}
+.info_item {
+    flex-shrink: 0;
+    width: 90%;
+    max-width: 320px;
+    padding: 16px;
+    border: 5px solid black;
+    border-radius: 16px;
+    margin: 16px;
+    box-shadow:inset 0 0 12px rgba(255,255,0,0.6);
+}
+.info_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.info_header img {
+    width: 54px;
+    height: 51px;
+}
+.info_grid {
+    display: grid;
+    grid-template-columns: 1fr 70px;
+}
+.info_grid input {
+    width: 32px;
+    text-align: right;
+}
+.info_grid p {
+    margin: 8px 0;
+}
+label {
+    display: block;
+    margin: 8px;
+}
+button {
+    width: 200px;
+    height: 30px;
+    margin: 15px 5px;
+    background-color: orange;
+    border: 2px solid orange;
+    border-radius: 8px;
+}
+#copyright {
+    text-align: right;
+    margin-bottom: 20px;
+}

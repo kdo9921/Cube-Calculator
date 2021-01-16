@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./cube.js"></script>
+    <title>큐브 운빨 계산기</title>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1 class="title">큐브 운빨 계산기</h1>
+        <div class="info_warp">
+            <div class="info_item">
+                <div class="info_header">
+                    <img id="cube_img" src="./img/black.png">
+                    <h2 id="cube_kind">블랙 큐브</h2>
+                </div>
+                <div class="info_grid">
+                    <p><span style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: #40a0ff;font-weight: bold;">레어</span>에서
+                        <span style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: #a840ff;font-weight: bold;">에픽</span>
+                    </p>
+                    <p><input class="cubePercent" value="15"></input> %</p>
+                    <p><span style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: #a840ff;font-weight: bold;">에픽</span>에서
+                        <span style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: yellow;font-weight: bold;">유니크</span>
+                    </p>
+                    <p><input class="cubePercent" value="3.5"></input> %</p>
+                    <p><span style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: yellow;font-weight: bold;">유니크</span>에서
+                        <span style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: #44db24;font-weight: bold;">레전드리</span>
+                    </p>
+                    <p><input class="cubePercent" value="1.4"></input> %</p>
+                </div>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="cube" onchange="changeCube();">
+                    <span>레드</span>
+                </label>
+                <label>
+                    <input type="radio" name="cube" onchange="changeCube();" checked="checked ">
+                    <span>블랙</span>
+                </label>
+                <label>
+                    <input type="radio" name="cube" onchange="changeCube();">
+                    <span>에디</span>
+                </label>
+            </div>
+        </div>
+        <p style="text-align: right;">기본 확률은 CMS에서 공개된 확률로, KMS의 큐브 확률과는 다를 수 있음</p>
+        <hr>
+        <h1>설정</h1>
+        <h2>목표</h2>
+        <label>
+            <input type="radio" name="potential" onchange="changeGoal();">
+            <span><span style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: #40a0ff;font-weight: bold;">레어</span>에서 <span
+                    style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: #a840ff;font-weight: bold;">에픽</span></span>
+        </label>
+        <label>
+            <input type="radio" name="potential" onchange="changeGoal();">
+            <span><span style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: #a840ff;font-weight: bold;">에픽</span>에서 <span
+                    style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: yellow;font-weight: bold;">유니크</span></span>
+        </label>
+        <label>
+            <input type="radio" name="potential" onchange="changeGoal();" checked="checked">
+            <span><span style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: yellow;font-weight: bold;">유니크</span>에서 <span
+                    style="text-shadow: 0 0 8px rgba(0,0,0,0.4);color: #44db24;font-weight: bold;">레전드리</span></span>
+        </label>
+        <p id="nag"></p>
+        <h2>이벤트</h2>
+        <label>
+            <input type="checkbox" id="miracle">
+            <span>미라클 타임</span>
+        </label>
+        <h2>개수</h2>
+        <label><span>사용 큐브 개수 : </span> <input value="0" id="amount"></label>
+        <button onclick="calculation();">계산하기</button>
+        <hr>
+        <h1>결과</h1>
+        <p>등급업 성공할 확률 : <span id="succesUp">0</span>%</p>
+        <hr>
+        <div id="copyright">
+            <p>제작 : ApteryxChan (엘리시움)<br><br>버그 발견시 <a href="mailto:kdo9921@apteryx.moe">이메일</a>이나 <a
+                    href="https://twitter.com/ApteryxChan">트위터</a>로 제보해주세요<br>GitHub에서 보기 : <a
+                    href="https://github.com/kdo9921/Starforce-Simulation">Starforce-Simulation</a><br></p>
+        </div>
+    </div>
+</body>
+
+</html>
